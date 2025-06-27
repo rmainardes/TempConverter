@@ -10,7 +10,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       - name: Diga Ola
-        uses: ./.github/actions/diga-ola-action
+        uses: ./.github/actions/digaola-action
   Build:
     runs-on: ubuntu-latest
     steps:
