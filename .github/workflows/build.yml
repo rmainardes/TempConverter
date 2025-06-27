@@ -28,10 +28,3 @@ jobs:
 
       - name: Run Build
         run: ./gradlew build
-
-      - name: Upload Test Report
-        if: failure()
-        uses: actions/upload-artifact@v4
-        with:
-          name: test-report
-          path: build/reports/
