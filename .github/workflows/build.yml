@@ -11,6 +11,10 @@ jobs:
         uses: actions/checkout@v4
       - name: Diga Ola
         uses: ./.github/actions/DigaOla-action
+      - name: Set gradlew permission
+        uses: ./.github/actions/set-gradle-permission
+      - name: Build project
+        uses: ./.github/actions/build-gradle
   Build:
     runs-on: ubuntu-latest
     steps:
