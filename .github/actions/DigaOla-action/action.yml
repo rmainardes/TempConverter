@@ -1,0 +1,9 @@
+name: DigaOla
+description: "Action para cumprimentar alguém"
+runs:
+  using: "composite"
+  steps:
+  - name: Diga Ola
+    run: echo "Ola"
+    shell: bash
+
