@@ -4,20 +4,23 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-public class TempConverterTest {
+class TempConverterTest {
 
     @Test void teste1(){
+        TempConverter converter = new TempConverter();
         assertThrows(IllegalArgumentException.class, ()->{
-            TempConverter converter = new TempConverter();
+
             converter.setTipoConversao("");
         });
     }
 
-    @Test void teste2(){
-        assertThrows(IllegalArgumentException.class, ()->{
-            TempConverter converter = new TempConverter();
-            converter.setTipoConversao("CELSIUS");
-            converter.setConversao(-288.0);
+    @Test
+    void teste2() {
+        TempConverter converter = new TempConverter();
+        converter.setTipoConversao("CELSIUS");
+
+        assertThrows(IllegalArgumentException.class, () -> {
+            converter.setConversao(-500.0);
         });
     }
 
